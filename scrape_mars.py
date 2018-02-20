@@ -135,16 +135,16 @@ def scrape():
 
 
     Mars_Data = {
-         "News Title": news_title,
-         "News Paragraph": news_paragraph,
-         "Most Recent Mars Image": recent_mars_image_url,
+         "News_Title": news_title,
+         "News_Paragraph": news_paragraph,
+         "Most_Recent_Mars_Image": recent_mars_image_url,
          "Mars_Weather": MarsWeather,
-         "Mars URL": hemisphere_image_url
+         "Mars_URL": hemisphere_image_url
          }
 
 
 
-    retrun(Mars_Data)
+    return(Mars_Data)
 
 
 # In[ ]:

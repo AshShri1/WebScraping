@@ -109,12 +109,11 @@ body {
       <div class="row" >
         <h1 class="header">Latest Mars News</h1>
           <div >
-            {% for each in listings.nasa %}
+            {% for each in listings %}
         
             <img class="img-circle " src={{each.img_link}} alt="Generic placeholder image" width="140" height="140">          
-            <h3>{{each.news}}</h3>
-            <h4>{{each.date_news}}</h4>
-            <p>{{each.news_paragraph}}</p>
+            <h3>{{each.News_Title}}</h3>
+            <p>{{each.News_Paragraph}}</p>
             <p><a class="btn btn-default" href={{each.details_a}} role="button">View details &raquo;</a></p>
             {% endfor %}
         
@@ -124,12 +123,12 @@ body {
       <div class="row div_box">
         <div class="col-md-7"><!-- image-->
           <h2 class="header">Featured Mars Image</h2>
-          <img src={{listings.featured_image_url}} class="feature_img">
+          <img src={{listings.Most_Recent_Mars_Image}} class="feature_img">
         </div>
         <div class="col-md-5 box "><!-- facts and weathe-->
           <div class="facts">
             <h3 class="header">Current Weather Data</h3>
-            <h4 class="heading" class="facts">{{listings.mars_weather}}</h4>
+            <h4 class="heading" class="facts">{{listings.MarsWeather}}</h4>
           </div>
         <div class="col-md-5"><!-- FACTS-->
           <h3>Mars Facts</h3>
@@ -140,10 +139,10 @@ body {
     <!-- hemispheres-->
     <h2 class="header">Mars Hemispheres</h2>
     <div class="row div_box">
-      {% for h in listings.hemisphere %}
+      {% for h in listings.Mars_URL %}
       <div class="col-sm-6 boxh">
-        <img src={{h.image_url}} class="feature_img">
-        <em class="header">{{h.title}}</em>
+        <img src={{h.Image_Url}} class="feature_img">
+        <em class="header">{{h.Title}}</em>
       </div>
       {% endfor %}
     </div><!-- close hemisphere image-->
